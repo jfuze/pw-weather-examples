@@ -1,5 +1,5 @@
 import { test, expect } from '../fixtures/page-objects';
-import { TodayPage } from '../pages/today-page';
+import { type TodayPage } from '../pages/today-page';
 
 // we'd ultimately use a library to generate geo data so we're not always using the same location
 const testData = [
