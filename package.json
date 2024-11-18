@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "verify": "npx playwright install --with-deps chromium firefox webkit",
+    "test": "npx playwright test --grep @regression && npx playwright show-report",
+    "test:chrome": "npx playwright test --grep @regression --project=chromium && npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.9.0"
+  }
+}
