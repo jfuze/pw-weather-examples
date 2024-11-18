@@ -7,6 +7,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 3 : undefined,
   reporter: 'html',
+  timeout: 120000,
   use: {
     // we'd likely use an environment variable for baseurl in a real-world scenario
     baseURL: 'https://weather.com',
