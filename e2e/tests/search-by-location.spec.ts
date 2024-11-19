@@ -12,7 +12,7 @@ test.describe('Search tests', async () => {
   test.beforeEach(async ({ todayPage }) => {
     // see comment in base-page.ts
     await todayPage.goToHomePage();
-});
+  });
 
   test('User can search by city name and view todays weather', async ({ todayPage }) => {
     await test.step('Search by location identifier', async () => {
