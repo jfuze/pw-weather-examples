@@ -19,7 +19,6 @@ test.describe('Search tests', async () => {
       await todayPage.inputLocationSearch.fill(location.city);
       // we can explicitly assert for visibility here, but playwright won't click if it's not visible
       await todayPage.buttonSelectSearchLocation.getByText(location.cityAndState).click();
-      // await verifyTodaysWeather(todayPage);
     });
     await test.step('Verify weather data is displayed for location', async () => await verifyTodaysWeather(todayPage))
   });
