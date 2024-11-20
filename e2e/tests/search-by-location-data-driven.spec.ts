@@ -34,7 +34,8 @@ const verifyTodaysWeather = async (todayPage: TodayPage, location = 'Franklin, T
   await expect(todayPage.page.url()).toContain('/today');
   await expect(todayPage.headerTodaysTemp).toHaveText(location);
   await expect(todayPage.cardSavedLocations).toContainText(location);
-  // these assertions are a little simple but could be enhanced with more business knowledge
+  // these assertions are a little simple but could be enhanced with more business knowledge, e.g. hitting an API
+  // to validate the correct values are displayed (though again, this could likely be tested efficiently at the integration level)
   await expect(todayPage.textCurrentTemp).toBeVisible();
   await expect(todayPage.textTodaysTempRange).toHaveCount(2);
   for (const temp of await todayPage.textTodaysTempRange.all()) {
